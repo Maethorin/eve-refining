@@ -32,8 +32,16 @@
     padding: 2px 8px;
 }
 
-.yield, .skills, .body {
-    overflow: hidden;
+.yield, .skills, .body, .processing-skills {
+    overflow: auto;
+}
+
+#processing-skills-list {
+    max-height: 80px;
+    overflow: auto;
+}
+
+.yield, .skills, .body, .processing-skills, .ore-select {
     border: 1px solid #DDD;
     padding: 5px;
     background-color: #222;
@@ -50,6 +58,13 @@
 
 .yield input:disabled, .body input:disabled, .footer input:disabled {
     color: #AAA;
+}
+
+.div-header {
+    background-color: #444;
+    border-bottom: 1px solid #999;
+    margin: -5px -5px 5px -5px;
+    padding: 0 4px;
 }
 
 .skills .btn {
@@ -72,7 +87,7 @@
 
 .skills .filled {
     border: 1px solid #DDD;
-    background-color: #555;
+    background-color: #888;
 }
 
 .list button {
@@ -160,6 +175,6 @@ input.ore-rest {
 }
 
 .footer input {
-    width: 250px;
+    width: 160px;
     font-size: 12px;
 }
