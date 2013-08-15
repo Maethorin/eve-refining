@@ -1,0 +1,153 @@
+.container {
+    max-width: 1250px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+#select-ore {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.small {
+    font-size: 11px;
+}
+
+.refining-panel {
+    background-color: #000;
+    border: 1px solid #FFF;
+    color: #FFF;
+    padding: 1px;
+}
+
+.header, .body, .footer {
+    overflow: auto;
+    border: 1px solid #FFF;
+    padding: 2px 8px;
+}
+
+.actions {
+    padding: 2px 8px;
+}
+
+.yield, .skills, .body {
+    overflow: hidden;
+    border: 1px solid #DDD;
+    padding: 5px;
+    background-color: #222;
+    font-size: 11px;
+}
+
+.yield input, .body input {
+    border: 1px solid #333;
+    padding: 2px;
+    background-color: #444;
+    width: 40px;
+    color: #DDD;
+}
+
+.yield input:disabled, .body input:disabled {
+    color: #AAA;
+}
+
+.skills .btn {
+    border: 1px solid #FFF;
+    padding: 0 4px;
+    font-size: 11px;
+    border-radius: 0;
+    font-weight: normal;
+}
+
+.skills .btn:hover {
+    border: 1px solid #DDD;
+    background-color: #888;
+}
+
+.skills .active {
+    border: 1px solid #FFF;
+    background-color: #222;
+}
+
+.skills .filled {
+    border: 1px solid #DDD;
+    background-color: #555;
+}
+
+.list button {
+    border-radius: 0;
+    padding: 2px 3px;
+    background-color: #222;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.list button:hover {
+    border: 1px solid #DDD;
+    background-color: #888;
+}
+
+.list .dropdown-menu {
+    min-width: 80px;
+    border-radius: 0;
+    border: 1px solid #FFF;
+    background-color: #444;
+    color: #FFF;
+}
+
+.list .dropdown-menu li a {
+    font-size: 11px;
+    color: #FFF;
+    padding: 3px 5px;
+}
+
+.list .dropdown-menu li a:hover {
+    color: #444;
+    background-image: linear-gradient(to bottom, #888, #777 100%)
+}
+
+.body table th {
+    padding: 0 3px;
+    font-weight: normal;
+}
+
+.body table tr {
+    font-color: #FFF;
+    border-bottom: 1px solid #FFF;
+    font-size: 10px;
+}
+
+input.ore-quantity, input.mineral-quantity {
+    width: 90px;
+}
+
+input.ore-price, input.mineral-price {
+    width: 50px;
+}
+
+input.ore-total, input.mineral-total {
+    width: 120px;
+}
+
+input.ore-volume, input.mineral-volume {
+    width: 100px;
+}
+
+input.ore-rest {
+    width: 30px;
+}
+
+.body .col-7, .body .col-5, .body .col-6, .body .col-12 {
+    padding: 0 3px;
+}
+
+.body .icon-info-sign {
+    font-size: 12px;
+}
+
+.body .table-container {
+    min-height: 250px;
+    background-color: #444;
+    border: 1px solid #888;
+}

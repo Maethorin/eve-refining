@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eve Refining Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/css/typeahead-bootstrap.css"/>
+    <link rel="stylesheet" href="static/css/base.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="refining-panel">
+            <div class="header">
+                <div class="col-11">Refining</div>
+                <div class="col-1 text-right"><span class="icon icon-remove"></span></div>
+            </div>
+            <div class="actions">
+                <div class="col-5">
+                    <div class="btn-group list">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="button-title">Select a Group</span>
+                            <span class="icon-caret-down"></span>
+                        </button>
+                        <ul class="dropdown-menu" id="group-list">
+                        </ul>
+                    </div>
+                    <div class="btn-group list">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="button-title">Select an Ore</span>
+                            <span class="icon-caret-down"></span>
+                        </button>
+                        <ul class="dropdown-menu" id="ore-list">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="skills">
+                        <div class="col-12">
+                            Skills
+                        </div>
+                        <div class="col-5">
+                            Refining:
+                        </div>
+                        <div class="col-7">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn refining">
+                                    <input type="radio" value="0"><span class="icon-remove"></span>
+                                </label>
+                                <label class="btn refining">
+                                    <input type="radio" value="1">&nbsp;
+                                </label>
+                                <label class="btn refining">
+                                    <input type="radio" value="2">&nbsp;
+                                </label>
+                                <label class="btn refining">
+                                    <input type="radio" value="3">&nbsp;
+                                </label>
+                                <label class="btn refining">
+                                    <input type="radio" value="4">&nbsp;
+                                </label>
+                                <label class="btn refining">
+                                    <input type="radio" value="5">&nbsp;
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            Refinery Efficiency:
+                        </div>
+                        <div class="col-7">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn refinery">
+                                    <input type="radio" value="0"><span class="icon-remove"></span>
+                                </label>
+                                <label class="btn refinery">
+                                    <input type="radio" value="1">&nbsp;
+                                </label>
+                                <label class="btn refinery">
+                                    <input type="radio" value="2">&nbsp;
+                                </label>
+                                <label class="btn refinery">
+                                    <input type="radio" value="3">&nbsp;
+                                </label>
+                                <label class="btn refinery">
+                                    <input type="radio" value="4">&nbsp;
+                                </label>
+                                <label class="btn refinery">
+                                    <input type="radio" value="5">&nbsp;
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="yield">
+                        <div class="col-8">
+                            Base Yield:
+                        </div>
+                        <div class="col-4">
+                            <input type="text" id="base-yield" value="50.00" class="text-right" />%
+                        </div>
+                        <div class="col-8">
+                            Net Yield:
+                        </div>
+                        <div class="col-4">
+                            <input type="text" id="total" value="87.50" class="text-right" disabled />%
+                        </div>
+                        <div class="col-8">
+                            Standings:
+                        </div>
+                        <div class="col-4">
+                            <input type="text" id="station-standings" value="6.67" class="text-right" />
+                        </div>
+                        <div class="col-8">
+                            We take:
+                        </div>
+                        <div class="col-4">
+                            <input class="text-right" id="station-tax" type="text" placeholder="0.00" disabled />%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="col-7 table-container">
+                    <table id="selected-ores" class="col-12">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Volume</th>
+                            <th>Rest</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-5 table-container">
+                    <table id="refining-result" class="col-12">
+                        <tr>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th>Volume</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="static/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="static/js/typeahead.js"></script>
+    <script type="text/javascript" src="static/js/jshashtable-3.0.js"></script>
+    <script type="text/javascript" src="static/js/jquery.numberformatter-1.2.3.min.js"></script>
+    <script type="text/javascript" src="lib/models.js"></script>
+    <script type="text/javascript" src="lib/templates.js"></script>
+    <script type="text/javascript" src="lib/calculate.js"></script>
+</body>
+</html>
+<!--
+        176452635
+        Quero informar q vcs perderam uma compra para o Ponto Frio, devido ao péssimo atendimento. Sei que no final, o dinheiro vai para o Pão de Açucar, de qualquer jeito, mas...
+
+Ao fazer esse pedido, ontem a noite, não consegui pagar por algum problema no banco. Como não pude alterar a forma de pagamento, fui orientado pelo seu serviço de atendimento a fazer um novo pedido. Qual não foi minha surpresa ao ver que de ontem pra hj os produtos aumentaram de preço.
+
+Entrei em contato com o suporte de vcs e novamente me informaram que eu não poderia usar o pedido anterior, com o preço mais baixo (o que vai contra as normas do PROCON, por sinal). Ou seja, se quisesse comprar, teria que pagar o preço mais caro mesmo tendo uma oferta do produto mais barato.
+
+O que fiz? Corri para o Ponto Frio, sabendo que é uma empresa do mesmo grupo e teria exatamente o mesmo produto. E, para minha alegria, tinha e com o mesmo preço de ontem. E melhor ainda... o desconto que recebí ao pagar com boleto bancário foi maior que nas Casas Bahia... Maravilha!
+
+Queria agradecer a vcs por me forçarem a buscar a melhor solução para mim e assim achar o mesmo produto de vcs com o preço melhor. Realmente vale o slogan das Casas Bahia: Dedicação Total a Você!
+
+Obrigado!
+
+-->
