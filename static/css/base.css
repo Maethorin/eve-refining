@@ -40,7 +40,7 @@
     font-size: 11px;
 }
 
-.yield input, .body input {
+.yield input, .body input, .footer input {
     border: 1px solid #333;
     padding: 2px;
     background-color: #444;
@@ -48,7 +48,7 @@
     color: #DDD;
 }
 
-.yield input:disabled, .body input:disabled {
+.yield input:disabled, .body input:disabled, .footer input:disabled {
     color: #AAA;
 }
 
@@ -150,4 +150,13 @@ input.ore-rest {
     min-height: 250px;
     background-color: #444;
     border: 1px solid #888;
+}
+
+.footer {
+    font-size: 12px;
+}
+
+.footer input {
+    width: 250px;
+    font-size: 12px;
 }

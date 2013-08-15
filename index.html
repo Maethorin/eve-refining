@@ -115,7 +115,7 @@
                             We take:
                         </div>
                         <div class="col-4">
-                            <input class="text-right" id="station-tax" type="text" placeholder="0.00" disabled />%
+                            <input class="text-right" id="station-tax" type="text" value="0.00" disabled />%
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,16 @@
                     </table>
                 </div>
             </div>
-            <div class="footer"></div>
+            <div class="footer">
+                <div class="col-7 text-right">
+                    <label for="ores-total">Total</label>
+                    <input type="text" value="0.00" id="ores-total" class="text-right" disabled /> ISK
+                </div>
+                <div class="col-5 text-right">
+                    <label for="minerals-total">Total</label>
+                    <input type="text" value="0.00" id="minerals-total" class="text-right" disabled/> ISK
+                </div>
+            </div>
         </div>
     </div>
 
