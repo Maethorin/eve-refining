@@ -142,7 +142,10 @@ input.ore-rest {
     padding: 0 3px;
 }
 
-.body .icon-info-sign {
+.body .icon-info {
+    border-radius: 9px;
+    padding: 1px 5px;
+    background-color: #08C;
     font-size: 12px;
 }
 
